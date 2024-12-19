@@ -18,6 +18,19 @@
     </properties>
 
     <dependencies>
+
+
+        <!-- Cucumber -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.14.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>7.14.0</version>
+        </dependency>
         <!-- Rest Assured -->
         <dependency>
             <groupId>io.rest-assured</groupId>
@@ -37,11 +50,11 @@
             <artifactId>json-schema-validator</artifactId>
             <version>5.3.0</version>
         </dependency>
-        <!-- Allure for Reporting -->
+        <!--       Allure for Reporting -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-rest-assured</artifactId>
-            <version>2.22.0</version>
+            <artifactId>allure-cucumber7-jvm</artifactId>
+            <version>2.29.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <dependency>
@@ -50,6 +63,17 @@
             <version>2.10.1</version>
         </dependency>
     </dependencies>
+
+    <!-- Build-related configurations -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.11.2</version>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>
